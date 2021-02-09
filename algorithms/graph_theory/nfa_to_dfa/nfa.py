@@ -266,5 +266,6 @@ def parse_regex(ticker, regex=""):
 
 if __name__ == "__main__":
   ticker = Ticker()
-  nfa = parse_regex(ticker, "((ab)|((b|a)(b*)))")
+  nfa = parse_regex(ticker, "(((c*)(a*))b)")
+  # nfa = parse_regex(ticker, "((ab)|((b|a)(b*)))")
   nfa.render("regex.gv")
